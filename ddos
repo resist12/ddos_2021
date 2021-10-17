@@ -1,0 +1,23 @@
+print("""
+__________________
+________________________
+   _________________________
+      ____________________________         RESIST SICIETY
+_____________________________
+____________________________________
+      _____________________________________
+
+""")
+print("to exit plz press ctr+c")
+print("---------------------")
+print("site ip")
+import os
+global ip
+ip_list = ['8.8.8.8']
+for ip in ip_list:
+    ip = input('>')
+    response = os.popen(f"ping {ip}").read()
+    if "Received = 10" in response:
+        print(f"ping {ip} sucseec")
+    else:
+        print(f"failed ping {ip} uncknown error")
